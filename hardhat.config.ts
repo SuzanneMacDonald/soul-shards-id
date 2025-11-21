@@ -73,7 +73,8 @@ const config: HardhatUserConfig = {
         bytecodeHash: "none",
       },
       optimizer: {
-        enabled: false,
+        enabled: true,
+        runs: 800,
       },
       evmVersion: "cancun",
     },
