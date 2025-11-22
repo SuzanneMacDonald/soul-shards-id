@@ -141,6 +141,7 @@ contract EncryptedPrivateExpenseLog is SepoliaConfig {
         require(_userEntries[user][date].exists, "Entry does not exist");
         ExpenseEntry memory entry = _userEntries[user][date];
         require(entry.timestamp > 0, "Invalid entry timestamp");
+        require(user != address(0), "Invalid user address");
         return (entry.category, entry.level, entry.emotion, entry.timestamp);
     }
 
