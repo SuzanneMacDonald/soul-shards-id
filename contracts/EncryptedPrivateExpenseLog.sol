@@ -201,6 +201,8 @@ contract EncryptedPrivateExpenseLog is SepoliaConfig {
             }
         }
 
+        require(index == count, "Data consistency check failed");
+
         return dates;
     }
 
