@@ -104,6 +104,7 @@ contract EncryptedPrivateExpenseLog is SepoliaConfig {
         view
         returns (euint8 encryptedLevel)
     {
+        require(user != address(0), "Invalid user address");
         require(_userEntries[user][date].exists, "Entry does not exist");
         return _userEntries[user][date].level;
     }
