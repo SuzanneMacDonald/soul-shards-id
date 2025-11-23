@@ -1,0 +1,5 @@
+/* Additional app-specific styles */
+.gradient-primary {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary) / 0.6));
+}
+
