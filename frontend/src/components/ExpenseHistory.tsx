@@ -91,13 +91,20 @@ interface ExpenseEntry {
   };
 
   return (
-    <Card className="border-border bg-card/80 backdrop-blur">
-      <CardHeader>
-        <CardTitle className="text-3xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-          Expense History
-        </CardTitle>
-        <CardDescription className="text-base">
-          View and decrypt your encrypted expense entries
+    <Card className="border-border bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-xl shadow-xl">
+      <CardHeader className="space-y-4">
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-3xl bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+            Encrypted Expense History
+          </CardTitle>
+          <Badge variant="secondary" className="flex items-center gap-2">
+            <Lock className="h-4 w-4" />
+            Privacy Protected
+          </Badge>
+        </div>
+        <CardDescription className="text-base flex items-center gap-2">
+          <Unlock className="h-4 w-4 text-green-500" />
+          View and decrypt your homomorphically encrypted expense entries
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

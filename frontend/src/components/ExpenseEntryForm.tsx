@@ -3,10 +3,12 @@ import { useAccount } from "wagmi";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select } from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import { useExpenseLog } from "@/hooks/useExpenseLog";
-import { Lock, Plus } from "lucide-react";
+import { Lock, Plus, Shield, Zap, Heart } from "lucide-react";
 import { useChainId } from "wagmi";
 import { getContractAddress } from "@/abi/Addresses";
 
@@ -14,7 +16,7 @@ const ExpenseEntryForm = () => {
   const chainId = useChainId();
   const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || getContractAddress(chainId);
 
-  const { isConnected } = useAccount();
+  const { isConnected, address } = useAccount();
   const { addEntry, isLoading, message } = useExpenseLog(CONTRACT_ADDRESS);
   const [category, setCategory] = useState("1");
   const [level, setLevel] = useState("1");
@@ -77,8 +79,8 @@ const ExpenseEntryForm = () => {
   return (
     <Card className="border-border bg-card/80 backdrop-blur">
       <CardHeader>
-        <CardTitle className="text-3xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-          Add Expense Entry
+        <CardTitle className="text-3xl bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+          Log New Encrypted Expense
         </CardTitle>
         <CardDescription className="text-base">
           Securely encrypt and record your expense data anonymously
