@@ -31,8 +31,10 @@ const App = () => {
             <header className="border-b border-border bg-card/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
               <div className="container mx-auto px-4 py-6 flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <Logo />
-                  <Badge variant="outline" className="hidden md:flex items-center gap-2">
+                  <div className="logo-hover floating-animation">
+                    <Logo />
+                  </div>
+                  <Badge variant="outline" className="hidden md:flex items-center gap-2 pulse-glow">
                     <Shield className="h-3 w-3" />
                     FHE-Powered
                   </Badge>
@@ -43,14 +45,14 @@ const App = () => {
 
             <main className="container mx-auto px-4 py-12 space-y-12">
               {/* Hero Section */}
-              <section className="text-center space-y-6 mb-12">
+              <section className="text-center space-y-6 mb-12 fade-in-up">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Badge variant="secondary" className="flex items-center gap-2">
+                  <Badge variant="secondary" className="flex items-center gap-2 shimmer-effect">
                     <Zap className="h-4 w-4 text-yellow-500" />
                     Fully Homomorphic Encryption
                   </Badge>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-6xl font-bold text-gradient-animated bg-clip-text text-transparent">
                   Soul Shards
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
@@ -61,15 +63,15 @@ const App = () => {
                   Analyze spending patterns without revealing sensitive financial data.
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center gap-2 text-sm feature-card p-3 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
                     <Shield className="h-5 w-5 text-green-500" />
                     <span>Privacy-First</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center gap-2 text-sm feature-card p-3 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
                     <TrendingUp className="h-5 w-5 text-blue-500" />
                     <span>Encrypted Analytics</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center gap-2 text-sm feature-card p-3 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
                     <BarChart3 className="h-5 w-5 text-purple-500" />
                     <span>Zero-Knowledge Proofs</span>
                   </div>
@@ -83,9 +85,9 @@ const App = () => {
               </div>
 
               {/* Analysis Section */}
-              <section className="space-y-6">
+              <section className="space-y-6 fade-in-up">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-2">Encrypted Data Analytics</h3>
+                  <h3 className="text-2xl font-bold mb-2 floating-animation">Encrypted Data Analytics</h3>
                   <p className="text-muted-foreground">
                     Perform computations on encrypted data without ever decrypting it
                   </p>
