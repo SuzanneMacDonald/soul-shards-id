@@ -2,6 +2,11 @@
 
 A privacy-preserving expense tracking application using Fully Homomorphic Encryption (FHE) on the blockchain. Record your expenses anonymously with encrypted data and analyze spending patterns without revealing amounts.
 
+## 🔗 Links
+
+- **🌐 Live Demo**: [View on Vercel](https://soul-shards-tan.vercel.app/)
+- **📹 Demo Video**: [Watch Demo Video](E:\Spring\Zama\soul-shards\soul-shards.mov)
+
 ## Features
 
 - **Encrypted Data Storage**: All expense data is encrypted using FHE before being stored on-chain
